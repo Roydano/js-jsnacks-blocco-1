@@ -75,3 +75,19 @@ document.getElementById('dispari').innerHTML = 'I numeri dispari che hai inserit
 
 //JSNACK 4
 
+var nameList = ['Dida', 'Maldini', 'Nesta', 'Stam', 'Danilo', 'Serginho', 'Pirlo', 'Seedorf', 'Gattuso', 'Kakà', 'Shevchenko'];
+
+var userName = prompt('Inserisci il nominativo che hai lasciato per partecipare alla festa del sig. Gatsby')
+
+var userName = userName.charAt(0).toUpperCase() + userName.slice(1).toLowerCase();
+
+var message = 'Ci dispiace sig.' + userName + ' ma il suo nome non è sulla lista degli invitati....ci dispiace ma non può partecipare alla festa del Sig. Gatsby';
+
+
+for(var i = 0; i < nameList.length; i++){
+    if(userName == nameList[i]){
+        message = 'Buonasera sig.' + userName + '. Il suo nome è sulla lista...prego si accomodi!';
+    }
+}
+
+document.getElementById('invito').innerHTML = message;
